@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Thought } from '../thought';
+import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-list-thoughts',
@@ -7,22 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListThoughtsComponent implements OnInit {
 
-  listThoughts = [
-    // {
-    //   content: 'Passo informações para o componente filho',
-    //   authorship: 'Componente Pai',
-    //   model: 'modelo1'
-    // },
-    // {
-    //   content: 'Minha propriedade é decorada com @input()',
-    //   authorship: 'Componente Filho',
-    //   model: 'modelo2'
-    // }
-  ]
+  listThoughts: Thought[] = []
 
-  constructor() { }
+  constructor(private service: ThoughtService) { }
 
   ngOnInit(): void {
+    this.service.list().subscribe((listThoughts) => {
+      this.listThoughts = listThoughts
+    })
   }
 
 }
