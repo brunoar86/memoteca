@@ -11,7 +11,7 @@ export class CreateThoughtComponent implements OnInit {
     id: '1',
     content: 'Learning Angular',
     authorship: 'Dev',
-    model: ''
+    model: 'Modelo 1'
   }
 
   constructor() { }
@@ -21,6 +21,10 @@ export class CreateThoughtComponent implements OnInit {
 
   createThought() {
     alert('New thought created');
+  }
+
+  cancelThought() {
+    alert('New thought creation has been canceled')
   }
 
 }

@@ -4,14 +4,14 @@
   </header>
   <form>
     <label for="pensamento">Pensamento</label>
-    <input type="textarea" class="input" id="pensamento" name="pensamento" placeholder="Digite o pensamento" [value]="thought.content">
+    <input type="textarea" class="input" id="pensamento" name="pensamento" placeholder="Digite o pensamento" [(ngModel)]="thought.content">
     <label for="autoria">Autoria</label>
-    <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Digite a autoria ou fonte" [value]="thought.authorship">
+    <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Digite a autoria ou fonte" [(ngModel)]="thought.authorship">
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
-          <input type="radio" id="modelo1" value="modelo1" name="modelo-card">
+          <input type="radio" id="modelo1" value="modelo1" name="modelo-card" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -26,11 +26,11 @@
       </div>
       <div class="radio-modelo">
         <label for="modelo2">
-          <input type="radio" id="modelo2" value="modelo2" name="modelo-card">
+          <input type="radio" id="modelo2" value="modelo2" name="modelo-card" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
-          <span>Modelo 1</span>
+          <span>Modelo 2</span>
         </label>
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono" >
@@ -41,11 +41,11 @@
       </div>
       <div class="radio-modelo">
         <label for="modelo3">
-          <input type="radio" id="modelo3" value="modelo3" name="modelo-card">
+          <input type="radio" id="modelo3" value="modelo3" name="modelo-card" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
-          <span>Modelo 1</span>
+          <span>Modelo 3</span>
         </label>
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono" >
@@ -57,7 +57,7 @@
     </div>
     <div class="acoes">
       <button (click)="createThought()" class="botao">Salvar</button>
-      <button class="botao">Cancelar</button>
+      <button routerLink="/listThoughts" class="botao">Cancelar</button>
     </div>
   </form>
 </section>
