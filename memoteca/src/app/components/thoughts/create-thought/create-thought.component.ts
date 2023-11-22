@@ -41,4 +41,12 @@ export class CreateThoughtComponent implements OnInit {
   cancelThought() {
     this.router.navigate(['/listThoughts'])
   }
+
+  activateButton(): string {
+    if (this.form.valid) {
+      return 'botao';
+    } else {
+      return 'disabled__button';
+    }
+  }
 }
