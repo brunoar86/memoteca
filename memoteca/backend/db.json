@@ -23,6 +23,12 @@
       "authorship": "Ditos populares",
       "model": "modelo1",
       "id": 4
+    },
+    {
+      "content": "Que a força esteja com você!",
+      "authorship": "Mestre Yoda",
+      "model": "modelo2",
+      "id": 5
     }
   ]
 }
