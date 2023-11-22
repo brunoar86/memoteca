@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Thought } from '../thought';
 import { ThoughtService } from '../thought.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
