@@ -1,0 +1,6 @@
+<div class="center" *ngIf="thereIsMoreThoughts; else semMaisPensamentos">
+  <button class="botao next-page">Carregar mais</button>
+</div>
+<ng-template #semMaisPensamentos>
+  <p class="center-message ff-inter">Não há mais pensamentos para exibir.</p>
+</ng-template>

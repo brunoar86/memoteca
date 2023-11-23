@@ -29,6 +29,18 @@
       "authorship": "Mestre Yoda",
       "model": "modelo2",
       "id": 5
+    },
+    {
+      "content": "Emacipate yourself from mental slavery",
+      "authorship": "Bob Marley",
+      "model": "modelo3",
+      "id": 6
+    },
+    {
+      "content": "Em terra de cego, quem tem olho é rei.",
+      "authorship": "Provérbios populares",
+      "model": "modelo2",
+      "id": 7
     }
   ]
 }
